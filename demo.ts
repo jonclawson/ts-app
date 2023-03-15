@@ -1,5 +1,5 @@
 import './style.css';
-import { AppTs, Component, Directive, Injectable, State } from './src';
+import { TsApp, Component, Directive, Injectable, State } from './src';
 
 class AppComponent implements Component {
   selector = '#app';
@@ -87,7 +87,7 @@ const states: Array<State> = [
   },
 ];
 
-new AppTs(
+new TsApp(
   [AppComponent, ButtonDirective, ContentComponent, TestComponent],
   states,
   [MyService]

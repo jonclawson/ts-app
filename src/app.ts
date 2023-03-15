@@ -10,7 +10,7 @@ import {
   Injectable,
 } from '.';
 
-export class AppTs {
+export class TsApp {
   router: Router;
   private helpers = [HrefHelper, ClickHelper];
   private services: Array<any> = [Injector];
