@@ -4,7 +4,7 @@ import { TsApp, Component, Directive, Injectable, State } from './src';
 class AppComponent implements Component {
   selector = '#app';
   template = `
-    <h1 data-click="shout">TS-APP</h1>
+    <h1 data-click="shout">{{name}}</h1>
 
     <button data-color="white" data-background="black" data-message="Hello"></button>
     <button data-message="Come back soon"></button>
@@ -13,6 +13,7 @@ class AppComponent implements Component {
     <div data-view="content"></div>
   `;
   dataset: {};
+  name = 'TS-APP';
   init() {}
   shout() {
     alert('hey ya');
