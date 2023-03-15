@@ -17,8 +17,8 @@ export class TsApp {
   private injector: Injector;
   constructor(
     private components: Array<any>,
-    private states: Array<State>,
-    services: Array<any> = []
+    services: Array<any> = [],
+    private states: Array<State>
   ) {
     this.services = [...this.services, ...services];
     this.injector = new Injector(this.services);

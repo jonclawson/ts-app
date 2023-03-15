@@ -47,7 +47,7 @@ class ContentComponent implements Component {
   {{ name }}
   `;
   dataset: any;
-  description = 'This is a router component'
+  description = 'This is a router component';
   name = 'content';
   init() {}
 }
@@ -59,7 +59,7 @@ class TestComponent implements Component {
     <button data-color="white" data-background="black" data-message="Hello"></button>
     <button data-message="Come back soon"></button>
   `;
-  name = "Test";
+  name = 'Test';
   dataset: any;
   inject: any = {
     myService: MyService,
@@ -93,6 +93,6 @@ const states: Array<State> = [
 
 new TsApp(
   [AppComponent, ContentComponent, TestComponent, ButtonDirective],
-  states,
-  [MyService]
+  [MyService],
+  states
 );
