@@ -6,8 +6,7 @@ class AppComponent implements Component {
   template = `
     <h1 data-click="shout">{{name}}</h1>
 
-    <button data-color="white" data-background="black" data-message="Hello"></button>
-    <button data-message="Come back soon"></button>
+
     <a href="/">Home</a>
     <a href="/test">Test</a>
     <div data-view="content"></div>
@@ -56,8 +55,11 @@ class ContentComponent implements Component {
 class TestComponent implements Component {
   selector: string;
   template = `
-    Test
+   <p> {{name}}</p>
+    <button data-color="white" data-background="black" data-message="Hello"></button>
+    <button data-message="Come back soon"></button>
   `;
+  name = "Test";
   dataset: any;
   inject: any = {
     myService: MyService,
@@ -90,7 +92,7 @@ const states: Array<State> = [
 ];
 
 new TsApp(
-  [AppComponent, ButtonDirective, ContentComponent, TestComponent],
+  [AppComponent, ContentComponent, TestComponent, ButtonDirective],
   states,
   [MyService]
 );
