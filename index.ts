@@ -1,2 +1,2 @@
-import './demo';
 export * from './src';
+import './demo';

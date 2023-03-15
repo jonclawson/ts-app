@@ -1,5 +1,5 @@
 import './style.css';
-import { TsApp, Component, Directive, Injectable, State } from './src';
+import { TsApp, Component, Directive, Injectable, State } from '.';
 
 class AppComponent implements Component {
   selector = '#app';
