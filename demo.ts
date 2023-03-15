@@ -5,14 +5,20 @@ class AppComponent implements Component {
   selector = '#app';
   template = `
     <h1 data-click="shout">{{name}}</h1>
-
+    <p>service calls: {{count}}</p>
 
     <a href="/">Home</a>
     <a href="/test">Test</a>
     <div data-view="content"></div>
   `;
   dataset: {};
+  inject: any = {
+    myService: MyService,
+  };
   name = 'TS-APP';
+  get count() {
+    return this.inject.myService.count;
+  }
   init() {}
   shout() {
     alert('hey ya');
@@ -47,9 +53,14 @@ class ContentComponent implements Component {
   {{ name }}
   `;
   dataset: any;
+  inject: any = {
+    myService: MyService,
+  };
   description = 'This is a router component';
   name = 'content';
-  init() {}
+  init() {
+    this.inject.myService.init();
+  }
 }
 
 class TestComponent implements Component {
