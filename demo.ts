@@ -85,7 +85,6 @@ class MyService implements Injectable {
   count = 0;
   init() {
     this.count++;
-    console.log(this.count);
   }
 }
 
