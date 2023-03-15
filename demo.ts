@@ -43,12 +43,13 @@ class ButtonDirective implements Directive {
 class ContentComponent implements Component {
   selector: string;
   template = `
-  This is my view
+  <p>{{description}}</p>
   <input name="name" data-bind="name"/>
   {{ name }}
   `;
   dataset: any;
-  name = 'Bob';
+  description = 'This is a router component'
+  name = 'content';
   init() {}
 }
 
