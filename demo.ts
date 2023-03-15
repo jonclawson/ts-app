@@ -5,7 +5,7 @@ class AppComponent implements Component {
   selector = '#app';
   template = `
     <h1 data-click="shout">{{name}}</h1>
-    <p>service calls: {{count}}</p>
+    <p>service calls: <b>{{count}}</b></p>
 
     <a href="/">Home</a>
     <a href="/test">Test</a>
