@@ -4,7 +4,7 @@ import { TsApp, Component, Directive, Injectable, State } from './src';
 class AppComponent implements Component {
   selector = '#app';
   template = `
-    <h1 data-click="shout">This is my app.</h1>
+    <h1 data-click="shout">TS-APP</h1>
 
     <button data-color="white" data-background="black" data-message="Hello"></button>
     <button data-message="Come back soon"></button>
